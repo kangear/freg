@@ -176,7 +176,7 @@ static void freg_create_proc(void) {
 	
 	entry = create_proc_entry(FREG_DEVICE_PROC_NAME, 0, NULL);
 	if(entry) {
-		entry->owner = THIS_MODULE;
+
 		entry->read_proc = freg_proc_read;
 		entry->write_proc = freg_proc_write;
 	}
