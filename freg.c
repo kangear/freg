@@ -202,7 +202,7 @@ static int  __freg_setup_dev(struct fake_reg_dev* dev) {
 		return err;
 	}	
 
-	init_MUTEX(&(dev->sem));
+	sema_init(&(dev->sem), 1);
 	dev->val = 0;
 
 	return 0;
